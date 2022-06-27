@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -13,6 +14,52 @@
 </head>
 
 <body>
+    <!-- *** SCROLL-TO-TOP *** -->
+    <div class="scroll-to-top">
+        <div class="scroll-to-top__icon">
+            <?xml version="1.0" ?>
+            <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.0//EN' 'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+            <svg enable-background="new 0 0 512 512" height="52px" id="Layer_1" version="1.0" viewBox="0 0 512 512"
+                width="52px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g>
+                    <g>
+                        <polygon points="442.2,242.2 399.8,284.6 253,137.8 106.2,284.6 63.8,242.2 253,53   " />
+                    </g>
+                </g>
+                <g>
+                    <g>
+                        <polygon points="442.2,416.6 399.8,459 253,312.2 106.2,459 63.8,416.6 253,227.4   " />
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <span>Наверх</span>
+    </div>
+
+    <div class="modal">
+        <div class="modal__box">
+            <div class="slider">
+                <div class="slider__arrow slider__arrow_prev">
+                    <?xml version="1.0" ?><svg height="48" viewBox="0 0 48 48" width="48"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.83 16.42l9.17 9.17 9.17-9.17 2.83 2.83-12 12-12-12z" />
+                        <path d="M0-.75h48v48h-48z" fill="none" />
+                    </svg>
+                </div>
+                <div class="slider__arrow slider__arrow_next">
+                    <?xml version="1.0" ?><svg height="48" viewBox="0 0 48 48" width="48"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.83 16.42l9.17 9.17 9.17-9.17 2.83 2.83-12 12-12-12z" />
+                        <path d="M0-.75h48v48h-48z" fill="none" />
+                    </svg>
+                </div>
+                <div class="slider__inner">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- *** HEADER *** -->
     <header class="header">
         <div class="container">
@@ -80,11 +127,12 @@
                         <p class="hero__subtitle">Специалист по рекламе</p>
                     </div>
                     <div class="hero__keypad">
-                        <button class="button button_hero">Написать мне</button>
-                        <div class="link-icon"><a class="link-icon__link" href="#"><img src="img/icons/insta.png"
-                                    alt="icon" class="link-icon__img"></a></div>
-                        <div class="link-icon"><a class="link-icon__link" href="#"><img src="img/icons/vk.png" alt="icon"
+                        <a href="https://vk.com/im?media=&sel=457931055" class="button button_hero">Написать мне</a>
+                        <div class="link-icon"><a class="link-icon__link"
+                                href="https://www.instagram.com/vivanikaa/"><img src="img/icons/insta.png" alt="icon"
                                     class="link-icon__img"></a></div>
+                        <div class="link-icon"><a class="link-icon__link" href="https://vk.com/idslowdown"><img
+                                    src="img/icons/vk.png" alt="icon" class="link-icon__img"></a></div>
                     </div>
                 </div>
             </div>
@@ -183,17 +231,17 @@
                 <h2 class="section__title">Мои работы</h2>
                 <div class="section__content section__content_template">
                     <ul class="template">
-                        <li class="template__item">
-                            <span class="template__title">Фотографии</span>
+                        <li class="template__item" data-type="photos">
+                            <div class="temp__filter"><span class="template__title">Фотографии</span></div>
                         </li>
-                        <li class="template__item">
-                            <span class="template__title">Логотипы</span>
+                        <li class="template__item" data-type="logos">
+                            <div class="temp__filter"><span class="template__title">Логотипы</span></div>
                         </li>
-                        <li class="template__item">
-                            <span class="template__title">Анимации</span>
+                        <li class="template__item" data-type="anims">
+                            <div class="temp__filter"><span class="template__title">Анимации</span></div>
                         </li>
-                        <li class="template__item">
-                            <span class="template__title">Визуал</span>
+                        <li class="template__item" data-type="visuals">
+                            <div class="temp__filter"><span class="template__title">Визуал</span></div>
                         </li>
                     </ul>
                 </div>
@@ -210,7 +258,7 @@
                     <ul class="contacts">
                         <li class="contacts__item">
                             <img src="img/icons/location.png" alt="location" class="contacts__icon">
-                            <a href="#" class="contacts__link">г. Боровичи ул. Энгельса д.7</a>
+                            <a href="" class="contacts__link">г. Боровичи ул. Энгельса д.7</a>
                         </li>
                         <li class="contacts__item">
                             <img src="img/icons/phone.png" alt="phone" class="contacts__icon">
@@ -223,7 +271,7 @@
                         </li>
                         <li class="contacts__item">
                             <img src="img/icons/other.png" alt="other" class="contacts__icon">
-                            <a href="#" class="contacts__link">Ссылка на остальные работы</a>
+                            <a href="" class="contacts__link">Ссылка на остальные работы</a>
                         </li>
                         <li class="contact__item">
                             <div class="contacts__map" style="position:relative;overflow:hidden;">
@@ -255,5 +303,5 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
